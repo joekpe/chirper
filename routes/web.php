@@ -14,7 +14,8 @@ use App\Http\Controllers\ChirpController;
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('/', 'dashboard')
+    ->middleware(['auth', 'verified']);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
